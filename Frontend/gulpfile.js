@@ -11,7 +11,9 @@ var sourcemaps = require('gulp-sourcemaps');
 /**
  * Copy all resources that are not TypeScript files into build directory.
  */
-gulp.task("resources", ["server", "index","cfg", "app", "assets","img","fonts"], function () {  
+gulp.task("resources", ["server", 
+// "index","cfg",
+ "app", "assets","img","fonts"], function () {  
     console.log("Building resources...");
 });
 
@@ -94,6 +96,8 @@ gulp.task("libs", function () {
 /**
  * Build the project.
  */
-gulp.task("default", ['resources','replace', 'libs'], function () {  
+gulp.task("default", ['resources','libs',
+// 'replace'
+], function () {  
     console.log("Building the project ...");
 });
