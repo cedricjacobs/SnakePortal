@@ -3,7 +3,9 @@
 </div>
 <div *ngIf="blogPosts">
     <h2>Posts</h2>
+    <a [routerLink]="['/blog/edit/0']" class="btn btn-link">Create new post</a>
     <ul *ngFor="let item of blogPosts">
         <li (click)="viewDetails(item)">{{item?.Title}}</li>
     </ul>
+
 </div>

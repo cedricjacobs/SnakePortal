@@ -3,7 +3,7 @@ import { BlogPost } from '../_models/blogpost';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BlogService } from './blog.service';
 import { AlertService } from "../_shared/alert.service";
-
+import { Location } from '@angular/common';
 /**
  * to-do: integrate edit view & back links
  */
@@ -18,7 +18,8 @@ export class BlogDetailViewComponent implements OnInit {
     constructor(private bs: BlogService
         , private activatedRoute: ActivatedRoute
         , private router: Router
-        , private alertService: AlertService) { }
+        , private alertService: AlertService
+        ,private location: Location) { }
 
     ngOnInit() {
         var id = +this.activatedRoute.snapshot.params["id"];
@@ -33,12 +34,12 @@ export class BlogDetailViewComponent implements OnInit {
         }
         else {
             console.log("Invalid id. Routing home...")
-            this.router.navigate(['']);
+            this.router.navigate(['/blog']);
         }
 
     }
     goBack() {
-        this.router.navigate(['']);
+        this.location.back();
     }
     edit(b:BlogPost) {
         this.router.navigate(['blog/edit',b.Id]);

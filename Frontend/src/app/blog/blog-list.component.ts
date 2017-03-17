@@ -25,5 +25,8 @@ export class BlogListComponent implements OnInit {
     viewDetails(b:BlogPost){
         this.router.navigate(['blog/view/',b.Id]);
     }
+    createNewPost(){
+      this.router.navigate(['blog/edit/',0]);  
+    }
 
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import * as b from './index'
 
 @NgModule({
-    imports: [b.CommonModule, b.BlogRoutingModule, b.SharedModule,],
+    imports: [b.CommonModule, b.BlogRoutingModule, b.SharedModule,b.ReactiveFormsModule],
     exports: [b.BlogListComponent],
     declarations: [b.BlogListComponent, b.BlogDetailViewComponent,b.BlogDetailEditComponent],
     providers: [b.BlogService],

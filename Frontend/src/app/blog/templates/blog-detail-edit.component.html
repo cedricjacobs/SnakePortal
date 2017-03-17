@@ -1,1 +1,62 @@
-<p>edit mode</p>
+<div class="panel">
+    <div class="panel-heading">
+        {{formTitle}}
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" novalidate autocomplete="off" (ngSubmit)="save()" [formGroup]="blogEditForm">
+            <fieldset>
+                <div class="form-group" [ngClass]="{'has-error': (blogEditForm.get('title').touched || 
+                                              blogEditForm.get('title').dirty) &&
+                                              !blogEditForm.get('title').valid }">
+                    <label class="col-md-2 control-label" for="titleId">Title</label>
+
+                    <div class="col-md-8">
+                        <input class="form-control" id="titleId" type="text" placeholder="Title (required)" formControlName="title" />
+                        <span class="help-block" *ngIf="(blogEditForm.get('title').touched || 
+                                                         blogEditForm.get('title').dirty) && 
+                                                         blogEditForm.get('title').errors">
+                            <span *ngIf="blogEditForm.get('title').errors.required">
+                                Please enter the title of the post.
+                            </span>
+                        <span *ngIf="blogEditForm.get('title').errors.minlength">
+                                The title must be longer than 10 characters.
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group" [ngClass]="{'has-error': (blogEditForm.get('message').touched || 
+                                              blogEditForm.get('message').dirty) &&
+                                              !blogEditForm.get('message').valid }">
+                    <label class="col-md-2 control-label" for="messageId">Message</label>
+
+                    <div class="col-md-8">
+                        <textarea rows="5" class="form-control" id="messageId" type="text" placeholder="Message (required)" formControlName="message">
+
+                        </textarea>
+                        <span class="help-block" *ngIf="(blogEditForm.get('message').touched || 
+                                                         blogEditForm.get('message').dirty) && 
+                                                         blogEditForm.get('message').errors">
+                            <span *ngIf="blogEditForm.get('message').errors.required">
+                                Please enter the body of the post.
+                            </span>
+                        <span *ngIf="blogEditForm.get('message').errors.minlength">
+                                The title must be longer than 30 characters.
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4 col-md-offset-2">
+                        <span>
+                            <button class="btn btn-primary"
+                                    type="submit"
+                                    [disabled]="!blogEditForm.valid">
+                                Save
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
