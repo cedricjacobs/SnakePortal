@@ -1,0 +1,15 @@
+    <div class="row">
+        <h1>{{title}}</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button type="button" (click)="goBack()" class="btn btn-secondary">Go Back</button>
+            <div *ngIf="user">
+                <p>{{user?.UserName}}
+
+                    <ul *ngFor="let item of user.Scores">
+                        <li>{{item.PlayerScore}} ({{item.CreatedDate}})</li>
+                    </ul>
+            </div>
+        </div>
+    </div>

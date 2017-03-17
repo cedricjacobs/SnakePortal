@@ -1,0 +1,9 @@
+<div>
+    <h2 *ngIf="!blogPosts" class="text-center"><span class="fa fa-spinner fa-spin"></span> Loading the blogposts...</h2>
+</div>
+<div *ngIf="blogPosts">
+    <h2>Posts</h2>
+    <ul *ngFor="let item of blogPosts">
+        <li (click)="viewDetails(item)">{{item?.Title}}</li>
+    </ul>
+</div>

@@ -1,0 +1,10 @@
+<h2>Feed of interesting things</h2>
+<div class="list-group">
+    <li  *ngFor="let feedEntry of feedEntries" class="list-group-item flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{feedEntry?.Title}}</h5>
+            <small>{{feedEntry?.CreatedDate}}</small>
+        </div>
+        <p class="mb-1">{{feedEntry?.Message}}</p>
+        <small>UserId:{{feedEntry?.UserId}}</small>
+    </li>

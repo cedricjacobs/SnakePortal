@@ -1,0 +1,8 @@
+<div>
+    <h2 *ngIf="!blogPost" class="text-center"><span class="fa fa-spinner fa-spin"></span> Loading the blogpost...</h2>
+</div>
+<div *ngIf="blogPost">
+    <h2>Detail</h2>
+        <h4 (click)="edit(blogPost)">{{blogPost?.Title}}</h4>
+        <p>{{blogPost?.Message}}</p>
+</div>

@@ -1,0 +1,15 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="navbar">
+  <button class="navbar-toggler navbar-toggler-right" type="button" (click)="isCollapsed = !isCollapsed">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand pointer" (click)="navigateTo('home')">SnakePortal</a>
+  <div class="collapse navbar-collapse collapse" [collapse]="isCollapsed">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link pointer" (click)="navigateTo('about')">About</a>
+      <a class="nav-item nav-link pointer" (click)="navigateTo('score')">Scores</a>
+      <a class="nav-item nav-link disabled">Levels</a>
+      <a class="nav-item nav-link pointer" (click)="navigateTo('blog/list')">Blogposts</a>
+      <a class="nav-item nav-link pointer" (click)="navigateTo('login')">Log in</a>
+    </div>
+  </div>
+</nav>

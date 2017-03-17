@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+body {
+  font-family: 'Oswald', sans-serif;
+
+}
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto 0 0;
+  /* Pad bottom by footer height */
+  padding: 0 0 0 0;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 50px;
+  background-color: mediumspringgreen;
+}
+
+#navbar {
+  background-color: mediumspringgreen;
+}
+
+#footer > .container {
+  padding-top:5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* default .loading styles, .loading should be invisible, opacity: 0, z-index: -1 */
+.loading {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: lightsteelblue;
+    z-index: -1;
+    display: inline-block;
+
+}
+/* .loading screen is visible when app is not bootstrapped yet, .snakeportal is empty */
+snakeportal:empty + .loading {
+    opacity: 1;
+    z-index: 100;
+}
+.center-loading {
+    vertical-align: middle;
+    padding-top:20%;
+  }
+.feed-container{
+    background-color: lightgoldenrodyellow;
+}
+.score-container{
+    background-color: lightgoldenrodyellow;
+    min-height: 92%;
+    padding-top:3px;
+}
+.orange{
+  background-color: orange;
+  padding-bottom: 3px;
+}
+
+.pointer{
+   cursor:pointer;
+}
+.jumbotron {
+   background: lightgoldenrodyellow; /* This is for ie8 and below */
+   background: rgba(lightgoldenrodyellow, 0.5); 
+}
+.btn-green{
+  background-color: mediumspringgreen;
+  color: black;
+}
+.flex{
+  display: flex;
+  align-items: center
+}
