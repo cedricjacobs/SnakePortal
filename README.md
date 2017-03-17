@@ -10,7 +10,6 @@ This a Angular2 project to present scores of a Snake Game. At this point the api
     On Windows: npm run startwin
     On Mac/Linux/etc. : npm start
    
-
 #Build
 1.	Local build:
     1. On Windows: npm run startwin
@@ -18,7 +17,12 @@ This a Angular2 project to present scores of a Snake Game. At this point the api
 2.	Build for production:
     1. On Windows: npm run prodwin
     2. On Mac/Linux/etc. : npm run prod
-    
+
+#Use the app
+1.	First register a new user
+2.	Login with that user
+3.  Navigate through all the sections
+
 #Known Issues
 1. To state the obvious: not running smoothly on IE. No problems on Chrome.
     
