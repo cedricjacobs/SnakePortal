@@ -13,11 +13,11 @@ This a Angular2 project to present scores of a Snake Game. At this point the api
 
 #Build
 1.	Local build:
-    On Windows: npm run startwin
-    On Mac/Linux/etc. : npm start
+    1. On Windows: npm run startwin
+    2. On Mac/Linux/etc. : npm start
 2.	Build for production:
-    On Windows: npm run prodwin
-    On Mac/Linux/etc. : npm run prod
+    1. On Windows: npm run prodwin
+    2. On Mac/Linux/etc. : npm run prod
     
 #Known Issues
 1. To state the obvious: not running smoothly on IE. No problems on Chrome.
