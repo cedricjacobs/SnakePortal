@@ -21,3 +21,6 @@ Build for production:
     On Windows: npm run prodwin
     On Mac/Linux/etc. : npm run prod
     
+#Known Issues
+To state the obvious: not running smoothly on IE. No problems on Chrome.
+    
