@@ -43,7 +43,6 @@
     "concurrently": "^3.3.0",
     "lite-server": "^2.2.2",
     "typescript": "^2.2.1",
-    "@angular/http-testing": "^2.4.7",
     "gulp": "3.9.1",
     "gulp-sourcemaps": "2.4.1",
     "gulp-string-replace":"0.4.0"
